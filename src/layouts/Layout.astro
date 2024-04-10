@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/inter-tight';
+
 interface Props {
 	title: string;
 }
@@ -7,12 +9,12 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -20,22 +22,28 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--primary-color: #6E4AB5;
+		--secondary-color: #ec5853;
+		--shadow-color: #95F0A3;
+		--white-light: #fff6ed;
+		--background-color: #19171d;
+		--background-color-light: #2b2833;
+		--background-color-dark: #0f0d12;
+		font-size: 62.5%;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: 'Inter Tight Variable', sans-serif;
+		background: #19171d;
+		height: 100%;
+		color-scheme: dark light;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
 	}
 	code {
 		font-family:
