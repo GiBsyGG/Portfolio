@@ -212,3 +212,9 @@
     background-position: left 50% top;
   }
 }
+
+@media screen and (max-width: 480px){
+  .project_card_container .img_container {
+    height: 260px;
+  }
+}
