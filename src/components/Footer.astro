@@ -1,0 +1,68 @@
+---
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+
+---
+
+<footer>
+  <div>
+    <a href="#nav" aria-label="a"><MdOutlineKeyboardArrowUp size="4rem" /></a>
+    <p>JUAN VALENCIA | @2024</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--background-color-light);
+    color: var(--color-white);
+    text-align: center;
+    height: 80px;
+    margin-top: 80px;
+  }
+
+  footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer a {
+    font-size: 2rem;
+    color: var(--color-white);
+    position: absolute;
+    top: -2.2rem;
+    margin: auto;
+    width: 36px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer a:hover {
+    animation-duration: 1s;
+    animation-name: slideupdown;
+    animation-iteration-count: infinite;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  @keyframes slideupdown {
+    0% {
+      top: -2.2rem;
+    }
+    50% {
+      top: -2.6rem;
+    }
+    100% {
+      top: -2.2rem;
+    }
+    
+  }
+
+</style>

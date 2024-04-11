@@ -13,7 +13,7 @@ export const ProjectsStore = [
     skillsUsed: ["C#", "Unity"],
     description: "Proyecto de videojuego shooter top-down creado en Unity. Creado para explorar la generación procedural de niveles y la creación de un sistema de armas en el juego.",
     role: "Programación, Game Design",
-    project_url: "https://github.com/GiBsyGG/Proyecto-Dungeon-Generator"
+    project_url: "https://gibsygg.itch.io/deads-loot"
   },
   {
     image_url: "/images/project_3.png",
@@ -24,11 +24,11 @@ export const ProjectsStore = [
     project_url: "https://gibsygg.github.io/Intro-React-2.0/"
   },
   {
-    image_url: "/images/project_2.png",
-    title: "Game Dead's Loot 2",
-    skillsUsed: ["React", "Node"],
-    description: "Proyecto de videojuego shooter top-down creado en Unity. Creado para explorar la generación procedural de niveles y la creación de un sistema de armas en el juego.",
-    role: "Programación, Game Design",
-    project_url: "https://kevin-parra.itch.io/knock-it-out-the-show"
+    image_url: "/images/project_4.png",
+    title: "Encryptor Alura",
+    skillsUsed: ["HTML", "CSS", "JS"],
+    description: "Proyecto simple del programa Alura Challenges. Creado para explorar el uso de HTML, CSS y JavaScript.",
+    role: "Programación",
+    project_url: "https://gibsygg.github.io/Encryptor/"
   },
 ]

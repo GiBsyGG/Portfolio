@@ -17,14 +17,22 @@ const aboutInfo = [
 ]
 ---
 
-<section>
+<section id="about">
     <h1>Sobre mi</h1>
     <div class="about_container">
-      <p>
-        Soy Estudiante de Ingeniería deSistemas e Informática en la Universidad Nacional de Colombia, Desarrollador Web y desarrollador de
-        Videojuegos, emocionado departicipar en proyectos quedestaquen mis habilidades y superenlas expectativas de los usuarios.
-        Maravillado por el área de la Tecnología y el Desarrollo, y enconstante aprendizaje de nuevas tecnologías para abrirme camino en los diferentes medios que ofrece elmundo del Desarrollo de Software.
-      </p>
+      <div class="text_container">
+        <p>
+          Soy Estudiante de Ingeniería de Sistemas e Informática en la Universidad Nacional de Colombia, enfocado en el Desarrollo Web y Desarrollo de
+          Videojuegos.
+        </p>
+        <p>
+          desde pequeño siempre me dió curiosidad el mundo de la tecnología, y En la Universidad tuve la oportunidad de acercarme a la programación, lo cual me atrajo de inmediato a este camino.
+        </p>
+        <p>
+          Me esfuerzo por mantener el constante aprendizaje de nuevas tecnologías para abrirme camino en los diferentes medios que ofrece el mundo del Desarrollo de Software.
+        </p>
+      </div>
+      
       <div class="cards_container">
         {aboutInfo.map((info) => (
           <CardAbout icon_url={info.icon_url} title={info.title} />
@@ -52,9 +60,14 @@ const aboutInfo = [
         height: 100%;
     }
 
-    p{
-        font-size: 2rem;
+    .text_container{
         width: 50%;
+        padding-right: 32px;
+        animation: fadeintextcontainer 1.6s;
+    }
+
+    p{
+        font-size: 1.8rem;
         text-wrap: balance;
     }
 
@@ -63,6 +76,58 @@ const aboutInfo = [
         flex-wrap: wrap;
         width: 50%;
         justify-content: space-around;
-        gap: 20px;
+        gap: 12px;
+        animation: fadeincardscontainer 1.6s;
+    }
+
+    @keyframes fadeintextcontainer {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeincardscontainer {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media screen and (max-width: 768px){
+        .about_container{
+            flex-direction: column;
+        }
+
+        .text_container{
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .cards_container{
+          margin-top: 20px;
+          width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 374px){
+        .cards_container{
+          gap: 20px;
+        }
+
+        h1 {
+          width: 100%;
+          text-align: center;
+          background-size: 60% 0.4em;
+          background-position: right 50% bottom 4%;
+        }
     }
 </style>

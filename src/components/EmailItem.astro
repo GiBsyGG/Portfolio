@@ -1,0 +1,68 @@
+<div class="btn" >
+  <h1>Envíame un correo </h1>
+  <a class="container" href="mailto:jcval2801@gmail.com">
+    <p><span>jcval2801</span>@<span>gmail</span>.com</p>
+  </a>
+</div>
+
+<style>
+  h1 {
+    font-size: 2.8rem;
+    color: var(--white-light);
+    letter-spacing: 1.2px;
+    margin-top: 0;
+    text-align: start;
+    width: 100%;
+  }
+
+  p {
+    font-size: 2rem;
+    color: var(--white-light);
+    letter-spacing: 1px;
+    margin: 16px 12px;
+    font-weight: 200;
+  }
+
+  span {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 28px;
+  }
+
+  .container {
+  --g: 8px;     /* the gap */
+  --b: 8px;    /* border thickness*/
+  --c: var(--secondary-color); /* the color */
+  
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: var(--background-color) 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+  }
+  .container:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+</style>

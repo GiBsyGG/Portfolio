@@ -7,10 +7,22 @@ import { ProjectItem } from './ProjectItem';
 
 import styles from '../../styles/ProjectSection.module.css'
 
+import { motion } from "framer-motion";
+
 interface Skill {
   item_url: string;
   item_title: string;
   is_active: boolean;
+}
+
+const skills_container = {
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
 }
 
 export function ProjectsContainer (){
@@ -34,7 +46,8 @@ export function ProjectsContainer (){
 
   return (
     <div>
-      <div className={styles.skills_container}>
+      <motion.div className={styles.skills_container} variants={skills_container}
+      initial="hidden" animate="visible">
         {skills.map((skill) => (
           <SkillItem key={skill.item_title}
           item_url={skill.item_url} 
@@ -42,7 +55,7 @@ export function ProjectsContainer (){
           is_active={skill.is_active} 
           onSkillClick={onSkillClick} />
         ))}
-      </div>
+      </motion.div>
 
       <div className={styles.projects_container}>
         {projects.map((project) => (

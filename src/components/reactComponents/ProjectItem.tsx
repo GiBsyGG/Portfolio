@@ -4,7 +4,7 @@ import { skillsStore } from '../../stores/skillsStore';
 import { AnimatePresence, motion } from "framer-motion"
 
 import styles from "../../styles/ProjectSection.module.css";
-
+import Image from 'astro/components/Image.astro';
 interface ProjectItemProps {
   image_url: string;
   title: string;
@@ -21,7 +21,7 @@ export function ProjectItem({ image_url, title, skillsUsed, description, role, p
   const skillUsedActive = skills.filter((skill) => skillsUsed.find((s) => s === skill.item_title));
   
   return (
-    <a href={project_url} className={styles.project_card_container}>
+    <a href={project_url} className={styles.project_card_container} target="_blank" rel="noopener noreferrer">
       <div className={styles.project_skills}>
         {skillUsedActive.map((activeSkill) => (
           <AnimatePresence key={activeSkill.item_title}>
