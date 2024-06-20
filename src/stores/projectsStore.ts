@@ -16,19 +16,19 @@ export const ProjectsStore = [
     project_url: "https://gibsygg.itch.io/deads-loot"
   },
   {
+    image_url: "/images/project_4.png",
+    title: "React TCG Game",
+    skillsUsed: ["HTML", "CSS", "JS", "React"],
+    description: "Juego de combate de cartas creado en React. Creado para explorar el uso de estados, efectos y lógica de juego, con la creación de un sistema de combate.",
+    role: "Programación",
+    project_url: "https://react-tcg.netlify.app/"
+  },
+  {
     image_url: "/images/project_3.png",
     title: "React ToDos App",
     skillsUsed: ["HTML", "CSS", "JS", "React"],
     description: "Proyecto de aplicación de tareas creado en React. Creado para explorar el uso de estados y efectos en React.",
     role: "Desarrollo Frontend",
     project_url: "https://gibsygg.github.io/Intro-React-2.0/"
-  },
-  {
-    image_url: "/images/project_4.png",
-    title: "Encryptor Alura",
-    skillsUsed: ["HTML", "CSS", "JS"],
-    description: "Proyecto simple del programa Alura Challenges. Creado para explorar el uso de HTML, CSS y JavaScript.",
-    role: "Programación",
-    project_url: "https://gibsygg.github.io/Encryptor/"
   },
 ]
